@@ -7,3 +7,4 @@ table(ans) / length(ans) #ratio
 
 #bar graph
 sum <- table(ans)
+barplot(sum, main="ANSWERS")
