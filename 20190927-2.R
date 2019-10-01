@@ -19,3 +19,19 @@ color <- c("red", "blue", "purple")
 plot(a, main="Iris Plot", pch=c(point), col=color[point])
 
 ##Correlation
+beers <- sample(10,10,replace=T)
+bal <-sample(10,10,replace=T)*0.01
+tbl <- data.frame(cbind(beers,bal))
+
+#scatter plot
+plot(bal~beers, data=tbl)
+
+#regression model
+res=lm(bal~beers, data=tbl)
+#regression libe
+abline(res)
+#correlation analysis
+cor(beers,bal)
+
+#correlation among multiple variables
+cor(iris[,1:4])
